@@ -61,58 +61,6 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/citizenship" />
-
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/radio_wna"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="@string/wna" />
-
-                <RadioButton
-                    android:id="@+id/radio_wni"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="@string/wni" />
-
-            </RadioGroup>
-
-            <LinearLayout
-                android:id="@+id/linearLayoutProv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/province" />
-
-                <Spinner
-                    android:id="@+id/spinnerProvince"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:prompt="@string/choose1" />
-
-                <Spinner
-                    android:id="@+id/spinnerCity"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:prompt="@string/choose1" />
-
-            </LinearLayout>
-
         </LinearLayout>
 
     </ScrollView>
