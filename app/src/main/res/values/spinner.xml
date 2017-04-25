@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Isine spinner
+    <string-array name="province_array">
+        <item>Nangroe Aceh Darussalam</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Riau</item>
+        <item>Kepulauan Riau</item>
+        <item>Jambi</item>
+        <item>Sumatera Selatan</item>
+        <item>Bangka Belitung</item>
+        <item>Bengkulu</item>
+        <item>Lampung</item>
+        <item>DKI Jakarta</item>
+        <item>Jawa Barat</item>
+        <item>Banten</item>
+        <item>Jawa Tengah</item>
+        <item>Daerah Istimewa Yogyakarta</item>
+        <item>Jawa Timur</item>
+        <item>Bali</item>
+        <item>Nusa Tengara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Timur</item>
+        <item>Kalimantan Utara</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi Barat</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Selatan</item>
+        <item>Gorontalo</item>
+        <item>Maluku</item>
+        <item>Maluku Utara</item>
+        <item>Papua Barat</item>
+        <item>Papua</item>
+    </string-array>
+
+    <string-array name="jatim_array">
+        <item>Banyuwangi</item>
+        <item>Batu</item>
+        <item>Bangkalan</item>
+        <item>Blitar</item>
+        <item>Bojonegoro</item>
+        <item>Bondowoso</item>
+        <item>Gresik</item>
+        <item>Jember</item>
+        <item>Jombang</item>
+        <item>Kediri</item>
+        <item>Lamongan</item>
+        <item>Lumajang</item>
+        <item>Madiun</item>
+        <item>Magetan</item>
+        <item>Malang</item>
+        <item>Pacitan</item>
+        <item>Pasuruan</item>
+        <item>Probolinggo</item>
+        <item>Sidoarjo</item>
+        <item>Situbondo</item>
+        <item>Surabaya</item>
+        <item>Trenggalek</item>
+        <item>Tulungagung</item>
+    </string-array>
+
+    <string-array name="jateng_array">
+        <item>Banjarnegara</item>
+        <item>Banyumas</item>
+        <item>Batang</item>
+        <item>Blora</item>
+        <item>Boyolali</item>
+        <item>Brebes</item>
+        <item>Cilacap</item>
+        <item>Demak</item>
+        <item>Grobogan</item>
+        <item>Jepara</item>
+        <item>Karanganyar</item>
+        <item>Kebumen</item>
+        <item>Kendal</item>
+        <item>Klaten</item>
+        <item>Kudus</item>
+        <item>Magelang</item>
+        <item>Pati</item>
+        <item>Pekalongan</item>
+        <item>Pemalang</item>
+        <item>Purbalingga</item>
+        <item>Purworejo</item>
+        <item>Rembang</item>
+        <item>Salatiga</item>
+        <item>Semarang</item>
+        <item>Sragen</item>
+        <item>Sukoharjo</item>
+        <item>Surakarta</item>
+        <item>Tegal</item>
+        <item>Temanggung</item>
+        <item>Wonogiri</item>
+        <item>Wonosobo</item>
+    </string-array>
+
+    <string-array name="jabar_array">
+        <item>Bandung</item>
+        <item>Banjar</item>
+        <item>Bekasi</item>
+        <item>Bogor</item>
+        <item>Ciamis</item>
+        <item>Cianjur</item>
+        <item>Cimahi</item>
+        <item>Cirebon</item>
+        <item>Garut</item>
+        <item>Indramayu</item>
+        <item>Karawang</item>
+        <item>Kuningan</item>
+        <item>Majalengka</item>
+        <item>Purwakarta</item>
+        <item>Subang</item>
+        <item>Sukabumi</item>
+        <item>Sumedang</item>
+        <item>Tasikmalaya</item>
+    </string-array>
+
+    <string-array name="aceh_array">
+        <item>Aceh Selatan</item>
+        <item>Aceh Tenggara</item>
+        <item>Aceh Timur</item>
+        <item>Aceh Tenga</item>
+        <item>Aceh Barat</item>
+        <item>Aceh Besar</item>
+        <item>Pidie</item>
+        <item>Aceh Utara</item>
+        <item>Subulussalam</item>
+        <item>Lhoksemawe</item>
+    </string-array>
+
+    <string-array name="diy_array">
+        <item>Bantul</item>
+        <item>Gunung Kidul</item>
+        <item>Kulon Progo</item>
+        <item>Sleman</item>
+        <item>Jogjakarta</item>
+    </string-array>
+
+    <string-array name="dki_array">
+        <item>Jakarta Barat</item>
+        <item>Jakarta Pusat</item>
+        <item>Jakarta Timur</item>
+        <item>Jakarta Selatan</item>
+        <item>Jakrta Utara</item>
+        <item>Kepulauan Seribu</item>
+    </string-array>
+
+    <string-array name="banten_array">
+        <item>Lebak</item>
+        <item>Pandeglang</item>
+        <item>Serang</item>
+        <item>Tangerang</item>
+        <item>Cilegon</item>
+    </string-array>
+
+    <string-array name="bali_array">
+        <item>Badung</item>
+        <item>Bangli</item>
+        <item>Buleleng</item>
+        <item>Gianyar</item>
+        <item>Jembrana</item>
+        <item>Karangasem</item>
+        <item>Klungkung</item>
+        <item>Tabanan</item>
+        <item>Denpasar</item>
+        <item>Denpasar Utara</item>
+    </string-array>
+
+    <string-array name="test_array">
+        <item>Test</item>
+        <item>Test</item>
+    </string-array>
+
+</resources>

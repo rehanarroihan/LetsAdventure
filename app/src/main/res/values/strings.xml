@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LetsAdventure</string>
+
+    //Register Activity
+    <string name="usrnm">Username</string>
+    <string name="passwd">Password</string>
+    <string name="email">Email</string>
+    <string name="city">City</string>
+    <string name="bt_register">Register</string>
+    <string name="province">Province</string>
+    <string name="choose1">Choose Province</string>
+
+    //Lalala
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+</resources>
