@@ -6,11 +6,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 
 public class RegisterActivity extends AppCompatActivity {
     int pos;
     private String TAG = "RegisterActivity";
+    private LinearLayout llProv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
         spnProvince.setPrompt(getResources().getString(R.string.choose1));
 
         final Spinner spnCity = (Spinner) findViewById(R.id.spinnerCity);
+        llProv = (LinearLayout) findViewById(R.id.linearLayoutProv);
 
         spnProvince.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -59,5 +63,22 @@ public class RegisterActivity extends AppCompatActivity {
                 // your code here
             }
         });
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio_wna:
+                if (checked)
+                    llProv.setVisibility(View.GONE);
+                break;
+            case R.id.radio_wni:
+                if (checked)
+                    llProv.setVisibility(View.VISIBLE);
+                break;
+        }
     }
 }
