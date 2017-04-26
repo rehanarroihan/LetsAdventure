@@ -11,10 +11,10 @@ import android.widget.EditText;
 public class RegisterActivity extends AppCompatActivity {
     private String TAG = "RegisterActivity";
 
-    private EditText etUsername, etEmail, etPassword;
+    private EditText etUsername, etEmail, etPassword, etFullName;
     private Button btRegister;
 
-    private String username, password, email;
+    private String username, password, email, fullname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
         etUsername = (EditText) findViewById(R.id.editTextRegUser);
         etEmail = (EditText) findViewById(R.id.editTextRegEmail);
         etPassword = (EditText) findViewById(R.id.editTextRegPasswd);
+        etFullName = (EditText) findViewById(R.id.editTextRegName);
         btRegister = (Button) findViewById(R.id.buttonRegister);
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
         username = etUsername.getText().toString().trim();
         password = etPassword.getText().toString().trim();
         email = etEmail.getText().toString().trim();
+        fullname = etFullName.getText().toString().trim();
 
         if (TextUtils.isEmpty(username)) {
             etUsername.setError("Username dibutuhkan");
@@ -55,7 +57,11 @@ public class RegisterActivity extends AppCompatActivity {
             return false;
         }
         if (TextUtils.isEmpty(email)) {
-            etPassword.setError("Password harus diisi");
+            etPassword.setError("Email harus diisi");
+            return false;
+        }
+        if (TextUtils.isEmpty(fullname)) {
+            etPassword.setError("Fullname harus diisi");
             return false;
         }
         return true;
