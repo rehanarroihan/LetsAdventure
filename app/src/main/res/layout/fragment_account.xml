@@ -18,6 +18,7 @@
         app:civ_border_width="0.1dp" />
 
     <TextView
+        android:id="@+id/textViewUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -27,6 +28,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/textViewEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-12dp"
@@ -36,6 +38,7 @@
         android:textStyle="italic" />
 
     <Button
+        android:id="@+id/buttonLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Logout" />
