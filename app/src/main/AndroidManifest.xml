@@ -37,7 +37,7 @@
             android:theme="@style/AppTheme.User" />
         <activity
             android:name=".WelcomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail"
@@ -45,6 +45,8 @@
         <activity
             android:name=".ListActivity"
             android:theme="@style/AppTheme" />
+        <activity android:name=".AddActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

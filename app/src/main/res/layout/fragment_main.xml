@@ -16,12 +16,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/buttonList"
+                android:id="@+id/buttonNearby"
                 android:layout_width="192.3dp"
                 android:layout_height="192.3dp"
                 android:background="@drawable/mn_nearby" />
 
             <Button
+                android:id="@+id/buttonList"
                 android:layout_width="192.3dp"
                 android:layout_height="192.3dp"
                 android:background="@drawable/mn_list1" />
@@ -39,6 +40,7 @@
                 android:background="@drawable/mn_search" />
 
             <Button
+                android:id="@+id/buttonAdd"
                 android:layout_width="192.3dp"
                 android:layout_height="192.3dp"
                 android:background="@drawable/mn_addloc" />
@@ -56,6 +58,7 @@
                 android:background="@drawable/mn_open" />
 
             <Button
+                android:id="@+id/buttonAbout"
                 android:layout_width="192.3dp"
                 android:layout_height="192.3dp"
                 android:background="@drawable/mn_about1" />

@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import id.sch.smktelkom_mlg.letsadventure.AboutActivity;
+import id.sch.smktelkom_mlg.letsadventure.AddActivity;
 import id.sch.smktelkom_mlg.letsadventure.ListActivity;
 import id.sch.smktelkom_mlg.letsadventure.R;
 
@@ -18,7 +20,7 @@ import id.sch.smktelkom_mlg.letsadventure.R;
  * A simple {@link Fragment} subclass.
  */
 public class MainFragment extends Fragment {
-    private Button btList;
+    private Button btList, btNearby, btAdd, btAbout;
 
 
     public MainFragment() {
@@ -42,6 +44,24 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btAdd = (Button) getView().findViewById(R.id.buttonAdd);
+        btAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AddActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btAbout = (Button) getView().findViewById(R.id.buttonAbout);
+        btAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AboutActivity.class);
                 startActivity(intent);
             }
         });
