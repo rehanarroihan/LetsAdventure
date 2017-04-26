@@ -13,7 +13,14 @@ import android.widget.TextView;
 
 import com.pixplicity.easyprefs.library.Prefs;
 
+import id.sch.smktelkom_mlg.letsadventure.GlobalSettings;
 import id.sch.smktelkom_mlg.letsadventure.R;
+import id.sch.smktelkom_mlg.letsadventure.interfaces.ProfileInterface;
+import okhttp3.OkHttpClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 /**
@@ -54,6 +61,31 @@ public class AccountFragment extends Fragment {
 
                 Prefs.putString("LoggedUsername", null);
                 getActivity().finish();
+            }
+        });
+
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl(GlobalSettings.ServerURL)
+                .addConverterFactory(
+                        GsonConverterFactory.create()
+                );
+
+        Retrofit retrofit = builder.client(httpClient.build()).build();
+        ProfileInterface p = retrofit.create(ProfileInterface.class);
+        Call<ProfileResponse> call = p.getInfo(Prefs.getString("LoggedUsername", null));
+        call.enqueue(new Callback<ProfileResponse>() {
+            @Override
+            public void onResponse(Call<ProfileResponse> call, retrofit2.Response<ProfileResponse> response) {
+                ProfileResponse p = response.body();
+                tvUsername.setText(p.getFullName());
+                tvEmail.setText(p.getEmail());
+            }
+
+            @Override
+            public void onFailure(Call<ProfileResponse> call, Throwable t) {
+
             }
         });
     }

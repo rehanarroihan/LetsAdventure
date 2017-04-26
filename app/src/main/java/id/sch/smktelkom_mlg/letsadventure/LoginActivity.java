@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.letsadventure;
 
+import android.app.ProgressDialog;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.pixplicity.easyprefs.library.Prefs;
 
@@ -52,6 +54,9 @@ public class LoginActivity extends AppCompatActivity {
     private void doLogin() {
         if (isValid()) {
             //DOLOGIN
+            final ProgressDialog progress = new ProgressDialog(this);
+            progress.setMessage("Logging in, please wait...");
+            progress.show();
 
             OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
@@ -70,16 +75,21 @@ public class LoginActivity extends AppCompatActivity {
                     Response r = response.body();
 
                     if (r.getSuccess() == true) {
+                        progress.dismiss();
                         Prefs.putString("LoggedUsername", username);
                         Intent i = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(i);
                         finish();
+                    } else {
+                        progress.dismiss();
+                        Toast.makeText(getApplicationContext(), "Login Failed, Try Again Later", Toast.LENGTH_SHORT).show();
                     }
                 }
 
                 @Override
                 public void onFailure(Call<Response> call, Throwable t) {
-
+                    progress.dismiss();
+                    Toast.makeText(getApplicationContext(), "Login Failed, Try Again Later", Toast.LENGTH_SHORT).show();
                 }
             });
         }

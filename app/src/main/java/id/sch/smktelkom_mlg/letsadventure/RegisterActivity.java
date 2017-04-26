@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.letsadventure;
 
+import android.app.ProgressDialog;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.pixplicity.easyprefs.library.Prefs;
 
@@ -57,6 +59,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void doRegister() {
         if (isValid()) {
+            //UX
+            final ProgressDialog progress = new ProgressDialog(this);
+            progress.setMessage("Registering, please wait...");
+            progress.show();
 
             OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
@@ -75,17 +81,21 @@ public class RegisterActivity extends AppCompatActivity {
                     Response r = response.body();
 
                     if (r.getSuccess() == true) {
+                        progress.dismiss();
                         Prefs.putString("LoggedUsername", username);
                         Intent i = new Intent(RegisterActivity.this, MainActivity.class);
                         startActivity(i);
                         finish();
-
+                    } else {
+                        progress.dismiss();
+                        Toast.makeText(getApplicationContext(), "Register Failed, Try Again Later", Toast.LENGTH_SHORT).show();
                     }
                 }
 
                 @Override
                 public void onFailure(Call<Response> call, Throwable t) {
-
+                    progress.dismiss();
+                    Toast.makeText(getApplicationContext(), "Register Failed, Try Again Later", Toast.LENGTH_SHORT).show();
                 }
             });
         }

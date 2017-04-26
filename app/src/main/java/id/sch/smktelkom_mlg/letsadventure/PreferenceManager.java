@@ -3,13 +3,10 @@ package id.sch.smktelkom_mlg.letsadventure;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by Wahaz on 26/04/2017.
- */
+public class PreferenceManager {
 
-public class PrefManager {
     // Shared preferences file name
-    private static final String PREF_NAME = "Lets Adventure Welcome";
+    private static final String PREF_NAME = "intro_slider-welcome";
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
     SharedPreferences pref;
     SharedPreferences.Editor editor;
@@ -17,7 +14,7 @@ public class PrefManager {
     // shared pref mode
     int PRIVATE_MODE = 0;
 
-    public PrefManager(Context context) {
+    public PreferenceManager(Context context) {
         this._context = context;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();

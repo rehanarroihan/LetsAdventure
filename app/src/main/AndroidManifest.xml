@@ -15,7 +15,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,15 +34,17 @@
         <activity
             android:name=".LandingActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.User"></activity>
+            android:theme="@style/AppTheme.User" />
         <activity
             android:name=".WelcomeActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,34 +8,60 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <Button
-            android:layout_width="360px"
-            android:layout_height="360px" />
-
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonList"
+                android:layout_width="192.3dp"
+                android:layout_height="192.3dp"
+                android:background="@drawable/mn_nearby" />
+
+            <Button
+                android:layout_width="192.3dp"
+                android:layout_height="192.3dp"
+                android:background="@drawable/mn_list1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="192.3dp"
+                android:layout_height="192.3dp"
+                android:background="@drawable/mn_search" />
+
+            <Button
+                android:layout_width="192.3dp"
+                android:layout_height="192.3dp"
+                android:background="@drawable/mn_addloc" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="192.3dp"
+                android:layout_height="192.3dp"
+                android:background="@drawable/mn_open" />
+
+            <Button
+                android:layout_width="192.3dp"
+                android:layout_height="192.3dp"
+                android:background="@drawable/mn_about1" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <Button
-            android:layout_width="172dp"
-            android:layout_height="223dp"
-            android:layout_weight="1.65" />
-
-        <Button
-            android:layout_width="146dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.63" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

@@ -55,14 +55,14 @@ public class WelcomeActivity extends AppCompatActivity {
 
         }
     };
-    private PrefManager prefManager;
+    private PreferenceManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Checking for first time launch - before calling setContentView()
-        prefManager = new PrefManager(this);
+        prefManager = new PreferenceManager(this);
         if (!prefManager.isFirstTimeLaunch()) {
             launchHomeScreen();
             finish();
@@ -146,7 +146,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, LandingActivity.class));
         finish();
     }
 
