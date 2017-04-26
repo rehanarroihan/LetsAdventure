@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardView"
     android:layout_width="match_parent"
@@ -23,7 +22,7 @@
             tools:src="@drawable/landing_bg" />
 
         <TextView
-            android:id="@+id/textViewJudul"
+            android:id="@+id/rvJudul"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_alignBottom="@+id/imageView"
@@ -33,7 +32,7 @@
             tools:text="Judul" />
 
         <TextView
-            android:id="@+id/textViewDeskripsi"
+            android:id="@+id/rvDeskripsi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView"
@@ -43,26 +42,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             tools:text="Deskripsi" />
 
-        <ImageButton
-            android:id="@+id/buttonFavorite"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_below="@+id/textViewDeskripsi"
-            android:layout_toLeftOf="@+id/buttonShare"
-            android:tint="#757575"
-            app:srcCompat="@drawable/ic_favorite_black_24dp" />
-
-        <ImageButton
-            android:id="@+id/buttonShare"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/textViewDeskripsi"
-            android:layout_marginRight="16dp"
-            android:tint="#757575"
-            app:srcCompat="@drawable/ic_share_black_24dp" />
 
     </RelativeLayout>
 

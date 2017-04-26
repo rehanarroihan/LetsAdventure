@@ -5,5 +5,5 @@ package id.sch.smktelkom_mlg.letsadventure;
  */
 
 public class GlobalSettings {
-    public static String ServerURL = "https://17d28634.ngrok.io";
+    public static String ServerURL = "http://213.183.51.22:5555";
 }
